@@ -13,11 +13,2373 @@
 	<link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/responsive.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 </head>
 
 <body>
-    테스트페이지
+    <script>
+		$(function () {
+			
+			//skills
+			if($('.body').hasClass('index')){
+			$(window).scroll(function () {
+		
+				if ($('.about').offset().top - 500 < $(this).scrollTop()) {
+					var skill_bar = $('.skill_bar');
+		
+					skill_bar.parent().each(function () {
+		
+						var bar = $(this).find('.bar'),
+							rate = $(this).find('.rate'),
+							data_rate = rate.attr('data-rate');
+		
+						bar.stop().animate({
+							'width': data_rate + '%'
+						}, 2500);
+		
+						var percent_number_step = $.animateNumber.numberStepFactories.append(' %');
+						rate.animateNumber({
+								number: data_rate,
+								numberStep: percent_number_step
+							},
+							2500
+						);
+					}); //skill_bar each
+		
+					//expertise 
+					$('.expertise >div').addClass('on');
+				} else {
+					$('.expertise >div').removeClass('on');
+				}
+		
+			});
+			}
+		}); //ready
+		</script>
+			</head>
+			<body>
+		
+		
+		<DIV id="wrapper">
+			<DIV id="header">
+				<DIV class="contain">
+					<H1 class="logo">
+						<A onclick="go_to_top(); return false;" href="#">
+							<IMG alt="LEE JAE HA" src="images/common/logo.png">
+						</A>
+					</H1>
+					<DIV class="gnb_btn_area">
+						<BUTTON class="gnb_btns" type="button">
+						<SPAN></SPAN><SPAN></SPAN><SPAN></SPAN>
+						</BUTTON>
+					</DIV>
+					<DIV class="gnb">
+						<UL>
+							<LI><A onclick="fnMove('1'); return false;" href="#fnMove1">INTRODUCE</A></LI>
+							<LI><A onclick="fnMove('2'); return false;" href="#fnMove2">WHAT I DO</A></LI>
+							<LI><A onclick="fnMove('3'); return false;" href="#fnMove3">PORTFOLIO</A></LI>
+						</UL>
+					</DIV>
+				</DIV>
+				<DIV class="gnb_m">
+					<UL>
+						<LI><A onclick="fnMove('1'); return false;" href="#fnMove1">INTRODUCE</A></LI>
+						<LI><A onclick="fnMove('2'); return false;" href="#fnMove2">WHAT I DO</A></LI>
+						<LI><A onclick="fnMove('3'); return false;" href="#fnMove3">PORTFOLIO</A></LI>
+					</UL>
+				</DIV>
+			</DIV>
+			<!-- header -->
+			<DIV id="main_contents">
+				<DIV class="intro_wrap">
+					<DIV class="main_visual">
+						<DIV class="pattern"></DIV>
+						<DIV class="text_box2" >
+							<SPAN class="txt1">WEB DESIGN<br>·<br>WEB PUBLISHER</SPAN>
+							<DIV class="type_wrap">
+								<DIV id="typed-strings-home">
+									<P>Welcome And Thank You For Visiting My Portfolio site.</P>
+								</DIV>
+								<SPAN class="txt2"></SPAN>
+							</DIV>
+						</DIV>
+						<SCRIPT>	
+						$(function () {
+							$(".txt2").typed({
+								stringsElement: $('#typed-strings-home'),
+								typeSpeed: 80,
+								backDelay: 2000,
+								backSpeed: 20,
+								loop: true
+							});
+						});
+						</SCRIPT>
+						<DIV class="main_video">
+							<VIDEO id="autoP" src="video/1920.mp4" autoplay="autoplay" loop="loop" muted=""></VIDEO>
+						</DIV>
+					</DIV>
+					<DIV class="intro bx_parallax" id="fnMove1">
+						<DIV class="pic">
+							<IMG alt="" src="images/main/me2.png">
+						</DIV>
+						<DIV class="section-title">
+								<H2 class="main_title bx_parallax" data-direc="f_down">INTRODUCE</H2>
+								<P class="bx_parallax" data-direc="f_down" data-delay="400">Web Designer &amp; Web Publisher 이재하입니다.</P>
+							</DIV>
+						<DIV class="info">
+							<DL class="bx_parallax" data-direc="f_left" data-delay="400">
+								<DT>NAME</DT>
+								<DD><SPAN>:</SPAN>LEE JAE HA</DD>
+								<DT>BIRTH</DT>
+								<DD><SPAN>:</SPAN>1982.04.23</DD>
+								<DT>SKILLS</DT>
+								<DD><SPAN>:</SPAN>HTML, CSS, JQUERY, PHOTOSHOP,<br> ILLUSTRATOR, PREMIERE</DD>
+								<DT>E-MAIL</DT>
+								<DD>
+									<SPAN>:</SPAN>
+									<A href="mailto:ymok0423@naver.com">ymok0423@naver.com</A>
+								</DD>
+							</DL>
+						</div>
+						<div class="info2" style="overflow:hidden;width:90%;margin:0 5%;position:relative;">
+							<DIV class="section_part">
+								<DIV class="section-text" >
+									<H3 class="bx_parallax">
+										<i class="fas fa-graduation-cap"></i> Education</H3>
+										<P class="bx_parallax" data-direc="f_left" data-delay="400">
+										대학교 졸업 후 중앙직업전문학교에서 웹디자인과정을 수련하여 웹에이전시에서 5년 이상 근무하였습니다.</P>
+									<UL class="bx_parallax" data-direc="f_left" data-delay="400">
+										<LI>2013.10 - 2014.02 중앙직업전문학교 웹디자인과정</LI>
+										<LI>2001.03 - 2008.02 계명대학교 영어영문학과</LI>
+										<LI>1998.03 - 2001.02 문화고등학교 (경주)</LI>
+									</UL>
+								</DIV>
+							</div>
+		
+							<DIV class="section_part">
+								<DIV class="section-text">
+									<H3 class="bx_parallax"><i class="far fa-sticky-note"></i> Technical certification</H3>
+									<UL class="bx_parallax" data-direc="f_left" data-delay="400">
+										<LI>2014.01.17 GTQ그래픽기술자격 1급</LI>
+									</UL>
+								</DIV>
+							</div>
+							<DIV class="section_part">
+								<DIV class="section-text">
+									<H3 class="bx_parallax"><i class="fas fa-cog fa-spin"></i> Skills</H3>
+									<P class="bx_parallax" data-direc="f_left" data-delay="400">
+										HTML / CSS / JQUERY를 이용한 코딩작업과 포토샵, 일러스트레이터 작업이 가능하며 프리미어 툴로 간단한 영상편집도 가능합니다.
+									</P>
+									<UL class="bx_parallax" data-direc="f_left" data-delay="400">
+										<LI>HTML / CSS / JQUERY</LI>
+										<LI>반응형 웹 / 웹표준</LI>
+										<LI>Photoshop / Illustrator / Premiere</LI>
+									</UL>
+								</DIV>
+							</DIV>
+						</div>
+					</DIV>
+				</DIV>
+				<!-- intro_wrap -->
+				<DIV class="wid" id="fnMove2">
+					<DIV class="video_bg">
+						<VIDEO class="wid_video" src="video/wid.mp4" autoplay="autoplay" loop="loop" muted="" style="height:100%;"></VIDEO>
+					</DIV>
+					<DIV class="wid_contents">
+						<DIV class="section-title">
+							<H2 class="main_title bx_parallax" data-direc="f_down" >WHAT I DO</H2>
+						</DIV>
+						<DIV class="body index" style="width:100%;float:left">
+						<SECTION class="about" style="width:100%;float:left">
+						<DIV class="container">
+							<div class="row">
+								<div class="col-md-4">
+									<DIV class="ps mgb2p">
+										<IMG alt="photoshop skill" src="images/ps_icon.png">
+										<DIV class="skill_bar">
+											<DIV class="bar"></DIV>
+											<DIV class="rate" data-rate="85"></DIV>
+										</DIV>
+										<p>ADOBE 포토샵</p>
+									</DIV>
+								</div>
+								<div class="col-md-4">
+									<DIV class="html mgb2p">
+										<IMG alt="html skill" src="images/html_icon.png">
+										<DIV class="skill_bar">
+											<DIV class="bar"></DIV>
+											<DIV class="rate" data-rate="90"></DIV>
+										</DIV>
+										<p>HTML</p>
+									</DIV>
+								</div>
+								<div class="col-md-4">
+									<DIV class="css mgb2p" >
+										<IMG alt="css skill" src="images/css_icon.png">
+										<DIV class="skill_bar">
+											<DIV class="bar"></DIV>
+											<DIV class="rate" data-rate="85"></DIV>
+										</DIV>
+										<p>CSS</p>
+									</DIV>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<DIV class="ai mgb2p">
+										<IMG alt="illustration skill" src="images/ai_icon.png">
+										<DIV class="skill_bar">
+											<DIV class="bar"></DIV>
+											<DIV class="rate" data-rate="75"></DIV>
+										</DIV>
+										<p>ADOBE 일러스트레이터</p>
+									</DIV>
+								</div>
+								<div class="col-md-4">
+									<DIV class="in mgb2p">
+										<IMG alt="indesign skill" src="images/premiere_icon.png">
+										<DIV class="skill_bar">
+											<DIV class="bar"></DIV>
+											<DIV class="rate" data-rate="85"></DIV>
+										</DIV>
+										<p>ADOBE 프리미어</p>
+									</DIV>
+								</div>
+								<div class="col-md-4">
+									<DIV class="js mgb2p">
+										<IMG alt="jquery skill" src="images/js_icon.png">
+										<DIV class="skill_bar">
+											<DIV class="bar"></DIV>
+											<DIV class="rate" data-rate="70"></DIV>
+										</DIV>
+										<p>JQEURY</p>
+									</DIV>
+								</div>
+							</div>
+							<!--
+							<div class="zt-span6 last">
+								<div class="zt-skill-bar"><div style="width:96.3%">디자인<span>100%</span></div></div>
+								<div class="zt-skill-bar"><div style="width:96.3%">HTML5/CSS3<span>100%</span></div></div>
+								<div class="zt-skill-bar"><div style="width:96.3%">Jquery<span>100%</span></div></div>
+							</div>
+							-->
+						</section>
+						</div>
+						</DIV>
+					</DIV>
+				</DIV>
+				<!-- wid -->
+				
+				<DIV class="portfolio" id="fnMove3">
+					<DIV class="section-title">
+						<H2 class="main_title bx_parallax" data-direc="f_down" style="color:#fff">PORTFOLIO</H2>
+						<P class="left bx_parallax tac" data-direc="f_left" data-delay="400" style="color:#666;">
+						프로젝트 목표를 제대로 이해하고 기획 및 디자인을 존중하며 여러 직군과 협업하여 작업한 다양한 형태의 프로젝트 경험을 가지고 있습니다.</P>
+					</DIV>
+					<DIV class="cate bx_parallax" data-direc="f_down" data-delay="500">
+						<UL>
+							<LI><A href="#" data-filter="*">전체</A></LI>
+							<LI><A href="#" data-filter=".homepy">홈페이지</A></LI>
+							<LI><A href="#" data-filter=".shop">쇼핑몰</A></LI>
+							<LI><A href="#" data-filter=".landing">랜딩페이지</A></LI>
+							<LI><A href="#" data-filter=".detail_page">상세페이지</A></LI>
+							<LI><A href="#" data-filter=".etc">기타 디자인</A></LI>
+							<LI><A href="#" data-filter=".video">영상편집</A></LI>
+						</UL>
+					</DIV>
+					<!-- portfolio -->
+					<DIV class="list_wrap">
+						<UL class="p_list" data-direc="f_down" data-delay="700">
+							
+							<!-- 홈페이지 -->
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-013">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="MES관리자페이지" src="work/admin/skin.jpg" style="height:100%">
+											<FIGCAPTION>
+												<H3>MES관리자 페이지</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 웹페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-012">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="열린솔루션홈페이지" src="work/opensol/opensol.jpg">
+											<FIGCAPTION>
+												<H3>열린솔루션 홈페이지</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 홈페이지 + 모바일 웹
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-011">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="자성화맛집코다리네" src="work/dgkodari/dgkodari.jpg" style="height:100%">
+											<FIGCAPTION>
+												<H3>코다리네 대구점</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>반응형 홈페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-010">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="자성화맛집코다리네" src="work/kodari/kodari.jpg">
+											<FIGCAPTION>
+												<H3>자성화맛집코다리네</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>반응형 홈페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-009">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="청도새마을회" src="work/cdsmu/cdsmu.jpg">
+											<FIGCAPTION>
+												<H3>청도새마을회</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>반응형 홈페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-008">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="고도초음파" src="work/godo/godo.jpg">
+											<FIGCAPTION>
+												<H3>고도초음파</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>반응형 홈페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<!-- 쇼핑몰 -->
+							<LI class="product-grid-item figure shop ">
+								<a href="#" data-toggle="modal" data-target="#shop-004">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="열린솔루션 쇼핑몰" src="work/opensol2/opensol2.jpg">
+											<FIGCAPTION>
+												<H3>열린솔루션 쇼핑몰</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 웹페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure shop ">
+								<a href="#" data-toggle="modal" data-target="#shop-003">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="국방기념품 쇼핑몰" src="work/bluetech/bluetech.jpg">
+											<FIGCAPTION>
+												<H3>국방기념품 쇼핑몰</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 웹페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure shop ">
+								<a href="#" data-toggle="modal" data-target="#shop-002">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="청도특산품 쇼핑몰" src="work/cdsmu2/cdsmu2.jpg">
+											<FIGCAPTION>
+												<H3>청도 쇼핑몰</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 웹페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure shop ">
+								<a href="#" data-toggle="modal" data-target="#shop-001">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="미환축산" src="work/mechuri/mechuri.jpg">
+											<FIGCAPTION>
+												<H3>미환축산 쇼핑몰</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 웹페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<!-- 쇼핑몰 끝 -->
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-007">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="휀스철망" src="work/mikwang/mikwang.jpg">
+											<FIGCAPTION>
+												<H3>휀스철망</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>반응형 홈페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-006">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="법무법인" src="work/dongseung/dongseung.jpg" style="height:100%;">
+											<FIGCAPTION>
+												<H3>법무법인</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 홈페이지 + 모바일 웹
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-005">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="엔지니어링" src="work/sinhyung/sinhyung.jpg" style="height:100%;">
+											<FIGCAPTION>
+												<H3>엔지니어링</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 홈페이지 + 모바일 웹
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-004">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="원영상" src="work/wonvideo/wonvideo.jpg" style="height:100%;">
+											<FIGCAPTION>
+												<H3>원영상</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 홈페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-003">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="영남일보CEO총동창회" src="work/ynceo/ynceo.jpg" style="height:100%;">
+											<FIGCAPTION>
+												<H3>영남일보CEO총동창회</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 홈페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-002" style="height:100%;">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="부산영림몰딩도어" src="work/ydoor/ydoor.jpg">
+											<FIGCAPTION>
+												<H3>부산영림몰딩도어</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 홈페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-001" style="height:100%;">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="보광명장학재단" src="work/bkmsf/bkmsf.jpg">
+											<FIGCAPTION>
+												<H3>보광명장학재단</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 홈페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure homepy ">
+								<a href="#" data-toggle="modal" data-target="#homepy-000">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="보소리쿼 홈페이지" src="work/boso/boso.jpg">
+											<FIGCAPTION>
+												<H3>보소리쿼 홈페이지</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>HTML / CSS / JQUERY
+												<BR>일반형 홈페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<!-- 랜딩페이지	-->
+							<LI class="product-grid-item figure landing ">
+								<a href="#" data-toggle="modal" data-target="#landing-001">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="랜딩페이지" src="work/etc/landing001.jpg">
+											<FIGCAPTION>
+												<H3>치과 랜딩페이지</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>PHOTOSHOP
+												<BR>랜딩페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure landing ">
+								<a href="#" data-toggle="modal" data-target="#landing-002">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="랜딩페이지" src="work/etc/landing002.jpg">
+											<FIGCAPTION>
+												<H3>법무법인 랜딩페이지</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>PHOTOSHOP
+												<BR>랜딩페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+		
+							<!-- 상세페이지 -->
+							<LI class="product-grid-item figure detail_page ">
+								<a href="#" data-toggle="modal" data-target="#detail-001">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="주방세트 상세페이지" src="work/detail_page/p001.jpg">
+											<FIGCAPTION>
+												<H3>주방세트 상세페이지</H3>
+												<P><!-- 2019.05 ~ 2020.05  -->
+												<BR>PHOTOSHOP
+												<BR>상세페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure detail_page">
+								<a href="#" data-toggle="modal" data-target="#detail-002">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="선물세트 상세페이지" src="work/detail_page/p002.jpg">
+											<FIGCAPTION>
+												<H3>선물세트 상세페이지</H3>
+												<P>
+												<BR>PHOTOSHOP
+												<BR>상세페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure detail_page">
+								<a href="#" data-toggle="modal" data-target="#detail-003">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="여행패키지 상세페이지" src="work/detail_page/p003.jpg">
+											<FIGCAPTION>
+												<H3>여행패키지 상세페이지</H3>
+												<P>
+												<BR>PHOTOSHOP
+												<BR>상세페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure detail_page">
+								<a href="#" data-toggle="modal" data-target="#detail-004">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="그릴 상세페이지" src="work/detail_page/p004.jpg">
+											<FIGCAPTION>
+												<H3>그릴 상세페이지</H3>
+												<P>
+												<BR>PHOTOSHOP
+												<BR>상세페이지
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<!-- 기타 -->
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-016">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="스킨디자인" src="work/etc/blog_skin005.jpg" style="height:100%">
+											<FIGCAPTION>
+												<H3>블로그 스킨</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>블로그 스킨
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-015">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="스킨디자인" src="work/etc/blog_skin004.jpg" style="height:100%">
+											<FIGCAPTION>
+												<H3>블로그 스킨</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>블로그 스킨
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-014">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="스킨디자인" src="work/etc/blog_skin003.jpg" style="height:100%">
+											<FIGCAPTION>
+												<H3>블로그 스킨</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>블로그 스킨
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-013">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="스킨디자인" src="work/etc/blog_skin002.jpg" style="height:100%">
+											<FIGCAPTION>
+												<H3>블로그 스킨</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>블로그 스킨
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-012">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="스킨디자인" src="work/etc/blog_skin001.jpg" style="height:100%">
+											<FIGCAPTION>
+												<H3>블로그 스킨</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>블로그 스킨
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-011">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="스킨디자인" src="work/etc/cafe002.jpg">
+											<FIGCAPTION>
+												<H3>카페 스킨</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>카페 스킨
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-010">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="스킨디자인" src="work/etc/cafe001.jpg">
+											<FIGCAPTION>
+												<H3>카페 스킨</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>카페 스킨
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-009">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="마케팅 광고" src="work/etc/poster001.jpg">
+											<FIGCAPTION>
+												<H3>전단지 디자인01</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>인쇄물
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-008">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="마케팅 광고" src="work/etc/poster002.jpg">
+											<FIGCAPTION>
+												<H3>전단지 디자인02</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>인쇄물
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-007">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="법무법인 전단지" src="work/etc/poster003.jpg">
+											<FIGCAPTION>
+												<H3>전단지 디자인03</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>인쇄물
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-006">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="광고 전단지" src="work/etc/poster004.jpg">
+											<FIGCAPTION>
+												<H3>전단지 디자인04</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>인쇄물
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-005">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="광고 전단지" src="work/etc/poster005.jpg">
+											<FIGCAPTION>
+												<H3>전단지 디자인05</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>인쇄물
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-004">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="전단지 디자인" src="work/etc/poster006.jpg">
+											<FIGCAPTION>
+												<H3>전단지 디자인06</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>인쇄물
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-001">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="음식점 메뉴판1" src="work/detail_page/p005.jpg">
+											<FIGCAPTION>
+												<H3>음식점 메뉴판1</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>인쇄물
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-002">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="음식점 메뉴판2" src="work/detail_page/p006.jpg">
+											<FIGCAPTION>
+												<H3>음식점 메뉴판2</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>인쇄물
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure etc">
+								<a href="#" data-toggle="modal" data-target="#etc-003">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="광고 전단지" src="work/detail_page/p007.jpg">
+											<FIGCAPTION>
+												<H3>한정식 광고지</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+												<BR>PHOTOSHOP
+												<BR>인쇄물
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<!-- 영상편집 -->
+							<LI class="product-grid-item figure video">
+								<a href="https://www.youtube.com/watch?v=VK7GpMEr8TE" target="_blank">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="영상편집" src="work/video/v003.jpg" style="height:100%">
+											<FIGCAPTION>
+												<H3>홍보영상</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+													<BR>PREMIERE
+													<BR>영상편집
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure video">
+								<a href="https://www.youtube.com/watch?v=cNa5VRJC0_8" target="_blank">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="영상편집" src="work/video/v002.jpg" style="height:100%">
+											<FIGCAPTION>
+												<H3>유튜브영상 편집</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+													<BR>PREMIERE
+													<BR>영상편집
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+							<LI class="product-grid-item figure video">
+								<a href="https://www.youtube.com/watch?v=c3bWbZlwIU8" target="_blank">
+									<FIGURE class="effect_a">
+										<SPAN class="img">
+											<IMG alt="영상편집" src="work/video/v001.jpg" style="height:100%">
+											<FIGCAPTION>
+												<H3>유튜브영상 편집</H3>
+												<P><!-- 2019.05 ~ 2020.05 -->
+													<BR>PREMIERE
+													<BR>영상편집
+												</P>
+											</FIGCAPTION>
+										</SPAN>
+									</figure>
+								</A>
+							</LI>
+		
+						</UL>
+						<!-- <A title="새창열림" class="more" href="pf.html" target="_blank">VIEW ALL</A> -->
+					</DIV><!-- list_wrap -->
+				</DIV><!-- portfolio -->
+			<DIV id="footer">
+				<span>
+				본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.<br>
+				COPYRIGHT © 2021. LEE JAE HA. ALL RIGHTS RESERVED.
+				</span>
+			</DIV>
+		</DIV><!-- main_contents -->
+		
+		<SCRIPT>
+			/* 스크롤시 해당 영역 메뉴 클래스 부여 */
+			$(document).on("scroll", onScroll);
+			function onScroll(event){
+				var scrollPosition = $(document).scrollTop();
+				$('.gnb ul a').each(function () {
+					var currentLink = $(this);
+					var refElement = $(currentLink.attr("href"));
+					var headerHeight = $("#header").height();
+					if (refElement.position().top-headerHeight <= scrollPosition) {
+						$('.gnb ul a').removeClass("active");
+						currentLink.addClass("active");
+					}else{
+						currentLink.removeClass("active");
+					}
+					});
+			}
+			var paraSrl = new OwenMotionScl();
+			</SCRIPT>
+		</DIV>
+		<!--
+		<DIV tabindex="-1" class="modal fade" id="detail-001" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">KT 기가지니 APP 구축</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/detail_page/p001.jpg">
+							<DIV class="modal-works"><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>KT SEEZN APP 구축&amp;운영<BR>HTML5 / CSS3 / 웹표준 / jQuery / 반응형웹 웹퍼블리싱 담당</P>
+						</div>
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3>오리녹스</H3>
+									<SPAN class="type">DETAIL PAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">반응형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">Main Page, Sub Page1, Sub Page2</SPAN></LI>
+										<LI><SPAN class="text">다양한 유형의 슬라이드, 현재 페이지 표시, 레이어 팝업창, 체크박스를 활용한 갤러리</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="#" target="_blank">VIEW WEBSITE</A>
+										<A href="#" target="_blank">VIEW SUB1</A>
+										<A href="#" target="_blank">VIEW SUB2</A>
+										<A href="#" target="_blank">VIEW CODE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<!-- 모달 팝업 -->
+		<!-- 홈페이지 -->
+		<DIV tabindex="-1" class="modal fade" id="shop-004" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">열린솔루션 쇼핑몰</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="opensol1"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>열린솔루션</span></H3>
+									<SPAN class="type">SHOPPING MALL</SPAN>
+									<UL>
+										<LI><SPAN class="text">일반형 + 모바일웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="http://opensol.kr" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/opensol2/opensol2.jpg">
+							<p>&nbsp;</p>
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>열린솔루션 쇼핑몰 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#opensol1" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="shop-003" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">국방기념품 쇼핑몰</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="bluetech"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>국방기념품</span></H3>
+									<SPAN class="type">SHOPPING MALL</SPAN>
+									<UL>
+										<LI><SPAN class="text">반응형 쇼핑몰</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="#;" onclick="alert('현재 호스팅이 중지입니다.')">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/bluetech/bluetech.jpg">
+							<p>&nbsp;</p>
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>국방기념품 쇼핑몰 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#bluetech" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="shop-002" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">청도 쇼핑몰</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="cdsmu2"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>청도</span></H3>
+									<SPAN class="type">SHOPPING MALL</SPAN>
+									<UL>
+										<LI><SPAN class="text">반응형 쇼핑몰</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="http://cdsmu.co.kr" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/cdsmu2/cdsmu2.jpg">
+							<p>&nbsp;</p>
+							<IMG class="img-responsive" alt="img20" src="work/cdsmu2/cdsmu2_1.jpg">
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>청도 쇼핑몰 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#cdsmu" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="shop-001" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">미환축산 쇼핑몰</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="mechuri"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>미환축산</span></H3>
+									<SPAN class="type">SHOPPING MALL</SPAN>
+									<UL>
+										<LI><SPAN class="text">일반형 쇼핑몰</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="http://mechuri.co.kr" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/mechuri/mechuri.jpg">
+							<p>&nbsp;</p>
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>미환축산 쇼핑몰 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#mechuri" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		
+		<!-- 홈페이지 -->
+		<DIV tabindex="-1" class="modal fade" id="homepy-013" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">MES 관리자</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="mes"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>MES 관리자</span></H3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">반응형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+											
+		
+										<A href="work/admin/index.php" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/admin/skin.jpg">
+							<p>&nbsp;</p>
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>MES 관리자페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#mes" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="homepy-012" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">열린솔루션 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="opensol"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>열린솔루션</span></H3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">반응형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="#;" onclick="alert('현재 호스팅이 중지되었습니다.')">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/opensol/opensol.jpg">
+							<p>&nbsp;</p>
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>열린솔루션 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#opensol" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="homepy-011" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">코다리네 대구점 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<a href="#;" name="dgkodari"></a>
+							<DIV class="inbox">
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>코다리네 대구점</span></H3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">반응형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="#" onclick="alert('현재 호스팅이 중지되었습니다.')">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/dgkodari/dgkodari.jpg">
+							<p>&nbsp;</p>
+							<IMG class="img-responsive" alt="img20" src="work/dgkodari/dgkodari2.jpg">
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>코다리네 대구점 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#dgkodari" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="homepy-010" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>
+						<H4 class="modal-title" id="Modal-label-21">자성화맛집코다리네 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<a href="#;" name="kodarine"></a>
+							<DIV class="inbox">
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>자성화맛집코다리네</span></H3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">반응형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="#;" onclick="alert('현재 호스팅이 중지되었습니다.')">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/kodari/kodari.jpg">
+							<p>&nbsp;</p>
+							<IMG class="img-responsive" alt="img20" src="work/kodari/kodari2.jpg">
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>자성화맛집코다리네 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#kodarine" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="homepy-009" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">청도새마을회 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="cdsmu"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>청도새마을회</span></h3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">반응형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="http://cdsmu.org" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/cdsmu/cdsmu.jpg">
+							<p>&nbsp;</p>
+							<IMG class="img-responsive" alt="img20" src="work/cdsmu/cdsmu2.jpg">
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>청도새마을회 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#cdsmu" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		
+		<DIV tabindex="-1" class="modal fade" id="homepy-008" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">고도초음파 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="godo"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>고도초음파</span></h3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">반응형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="http://godotech.hvi.kr" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/godo/godo.jpg">
+							<p>&nbsp;</p>
+							<IMG class="img-responsive" alt="img20" src="work/godo/godo2.jpg">
+							<p>&nbsp;</p>
+							<IMG class="img-responsive" alt="img20" src="work/godo/godo3.jpg">
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>고도초음파 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#godo" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		
+		<DIV tabindex="-1" class="modal fade" id="homepy-007" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">철망휀스 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="fence"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>철망휀스</span></h3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">반응형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="http://xn--hc0bs6vfsbj4ldonm9o.com/" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/mikwang/mikwang.jpg">
+							<p>&nbsp;</p>
+							<IMG class="img-responsive" alt="img20" src="work/mikwang/mikwang2.jpg">
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>철망휀스 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#fence" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		
+		<DIV tabindex="-1" class="modal fade" id="homepy-006" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">법무법인 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="law"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>법무법인</span></h3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">일반형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="#;" onclick="alert('현재 호스팅이 중지되었습니다.')">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/dongseung/dongseung.jpg">
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>법무법인 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#law" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		
+		<DIV tabindex="-1" class="modal fade" id="homepy-005" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">신형엔지니어링 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<a href="#;" name="sinhyung"></a>
+							<DIV class="inbox">
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>신형엔지니어링</span></h3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">일반형 웹 + 모바일 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="http://sinhyung.com" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/sinhyung/sinhyung.jpg">
+							<p>&nbsp;</p>
+							<IMG class="img-responsive" alt="img20" src="work/sinhyung/sinhyung2.jpg">
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>신형엔지니어링 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#sinhyung" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		
+		<DIV tabindex="-1" class="modal fade" id="homepy-004" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">원영상 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="wonvideo"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>원영상</span></h3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">일반형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="http://wonvideo.co.kr" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/wonvideo/wonvideo.jpg">
+							<p>&nbsp;</p>
+							<IMG class="img-responsive" alt="img20" src="work/wonvideo/wonvideo2.jpg">
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>원영상 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#wonvideo" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		
+		<DIV tabindex="-1" class="modal fade" id="homepy-003" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">영남일보 총동창회 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<a href="#;" name="ynceo"></a>
+							<DIV class="inbox">
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>영남일보 총동창회</span></h3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">일반형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="http://ynceo.org" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/ynceo/ynceo.jpg">
+							<p>&nbsp;</p>
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>영남일보 총동창회 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#ynceo" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		
+		<DIV tabindex="-1" class="modal fade" id="homepy-002" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">부산영림몰딩 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="ydoor"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>부산영림몰딩</span></h3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">일반형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="http://ydoor.kr" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/ydoor/ydoor.jpg">
+							<p>&nbsp;</p>
+							<IMG class="img-responsive" alt="img20" src="work/ydoor/ydoor2.jpg">
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>부산영림몰딩 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#ydoor" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		
+		<DIV tabindex="-1" class="modal fade" id="homepy-001" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">장학재단 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="bkmsf"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>장학재단</span></h3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">일반형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="http://bkmsf.org" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/bkmsf/bkmsf.jpg">
+							<p>&nbsp;</p>
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>장학재단 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#bkmsf" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		
+		<DIV tabindex="-1" class="modal fade" id="homepy-000" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog pop2" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">보소리쿼 홈페이지</H4>
+					</DIV>
+					<DIV class="modal-body " style="background:url(images/bgbgbg.jpg);">
+						<div class="pro_txt">
+							<DIV class="inbox">
+								<a href="#;" name="boso"></a>
+								<DIV class="detail">
+									<SPAN class="num-now">#</SPAN>
+									<H3><span>보소리쿼</span></h3>
+									<SPAN class="type">HOMEPAGE</SPAN>
+									<UL>
+										<LI><SPAN class="text">일반형 웹</SPAN></LI>
+										<LI><SPAN class="text">퍼블리싱 100%;</SPAN></LI>
+										<LI><SPAN class="text">HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</SPAN></LI>
+									</UL>
+									<DIV class="btn-box">
+										<A href="http://bosoliquor.co.kr" target="_blank">VIEW WEBSITE</A>
+										<a href="#" aria-label="Close" type="button" data-dismiss="modal">CLOSE</A>
+									</DIV>
+									
+								</DIV>
+							</DIV>
+						</div>
+						<div class="pro_pic">
+							<IMG class="img-responsive" alt="img20" src="work/boso/boso.jpg">
+							<p>&nbsp;</p>
+							<IMG class="img-responsive" alt="img20" src="work/boso/boso2.jpg">
+							<DIV class="modal-works"><span>웹디자인</span><SPAN>웹퍼블리싱</SPAN></DIV>
+							<P>보소리쿼 홈페이지 구축&amp;유지보수<BR>HTML / CSS / jQuery / 웹디자인&웹퍼블리싱 담당</P>
+						</div>
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#boso" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		
+		
+		<!--  랜딩페이지 -->
+		<DIV tabindex="-1" class="modal fade" id="landing-002" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">법무법인 랜딩페이지</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="landing002"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/landing002.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#landing002" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="landing-001" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">치과 랜딩페이지</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="landing001"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/landing001.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#landing001" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<!-- 상세페이지 -->
+		<DIV tabindex="-1" class="modal fade" id="detail-004" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">여행패키지 상세페이지</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="detail004"></a>
+						<IMG class="img-responsive" alt="img20" src="work/detail_page/p004.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#detail004" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="detail-003" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">여행패키지 상세페이지</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="detail003"></a>
+						<IMG class="img-responsive" alt="img20" src="work/detail_page/p003.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#detail003" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="detail-002" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">선물세트 상세페이지</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="detail002"></a>
+						<IMG class="img-responsive" alt="img20" src="work/detail_page/p002.jpg">
+						<!--
+						<DIV class="modal-works"><SPAN>웹퍼블리싱</SPAN></DIV>
+						<P>KT SEEZN APP 구축&amp;운영<BR>HTML5 / CSS3 / 웹표준 / jQuery / 반응형웹 웹퍼블리싱 담당</P>
+						-->
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#detail002" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="detail-001" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">주방세트 상세페이지</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="detail001"></a>
+						<IMG class="img-responsive" alt="img20" src="work/detail_page/p001.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#detail001" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		
+		<!-- 기타 디자인 -->
+		<DIV tabindex="-1" class="modal fade" id="etc-016" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">블로그스킨 디자인</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc016"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/blog_skin005.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc016" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-015" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">블로그스킨 디자인</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc015"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/blog_skin004.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc015" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-014" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">블로그스킨 디자인</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc014"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/blog_skin003.jpg">
+						<!--
+						<DIV class="modal-works"><SPAN>웹퍼블리싱</SPAN></DIV>
+						<P>KT SEEZN APP 구축&amp;운영<BR>HTML5 / CSS3 / 웹표준 / jQuery / 반응형웹 웹퍼블리싱 담당</P>
+						-->
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc014" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-013" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">블로그스킨 디자인</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc014"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/blog_skin002.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc014" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-012" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document" style="width:80%;margin:1.5% 10%;">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">블로그스킨 디자인</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc012"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/blog_skin001.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc012" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-011" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">카페스킨 디자인</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc011"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/cafe002.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc011" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-010" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">카페스킨 디자인</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc010"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/cafe001.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc010" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-009" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">전단지 디자인01</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc009"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/poster001.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc009" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-008" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">전단지 디자인02</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc008"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/poster002.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc008" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-007" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">전단지 디자인03</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc007"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/poster003.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc007" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-006" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">전단지 디자인04</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc006"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/poster004.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc006" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-005" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">전단지 디자인05</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc005"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/poster005.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc005" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-004" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>
+						<H4 class="modal-title" id="Modal-label-21">전단지 디자인06</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc004"></a>
+						<IMG class="img-responsive" alt="img20" src="work/etc/poster006.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc004" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-003" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">한정식 광고지</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc003"></a>
+						<IMG class="img-responsive" alt="img20" src="work/detail_page/p007.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc003" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-002" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">음식점 메뉴판2</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc002"></a>
+						<IMG class="img-responsive" alt="img20" src="work/detail_page/p006.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc002" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<DIV tabindex="-1" class="modal fade" id="etc-001" role="dialog" aria-labelledby="Modal-label-21">
+			<DIV class="modal-dialog" role="document">
+				<DIV class="modal-content">
+					<DIV class="modal-header">
+						<BUTTON class="close" aria-label="Close" type="button" data-dismiss="modal">
+							<SPAN aria-hidden="true">×</SPAN>
+						</BUTTON>						 
+						<H4 class="modal-title" id="Modal-label-21">음식점 메뉴판1</H4>
+					</DIV>
+					<DIV class="modal-body" style="background:url(images/bgbgbg.jpg);">
+						<a href="#;" name="etc001"></a>
+						<IMG class="img-responsive" alt="img20" src="work/detail_page/p005.jpg">
+					</DIV>
+					<DIV class="modal-footer">
+						<a href="#etc001" class="modal_btn modal_btn-default modal_top_btn">TOP </a>
+						<BUTTON class="modal_btn modal_btn-default" type="button" data-dismiss="modal">Close</BUTTON>
+					</DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+		<!--
+		<a id="MOVE_TOP_BTN" href="#"><i class="fas fa-3x fa-arrow-circle-up"></i></a>
+		-->
+		
+		
+		<script>
+		$(document).ready(function () {
+			$('head').append('<style type="text/css">.modal .modal-body {max-height: ' + ($('body').height() * .8) + 'px;overflow-y: auto;}.modal-open .modal{overflow-y: hidden !important;}</style>');
+		});
+		</script>
+		
+		<style>
+		a#MOVE_TOP_BTN {
+			position: fixed;
+			right: 2%;
+			bottom: 50px;
+			display: none;
+			z-index: 999;
+			color:#fff;
+			text-decoration:none;
+		}
+		</style>
+		
+		
+		<script>
+			$(function() {
+				$(window).scroll(function() {
+					if ($(this).scrollTop() > 300) {
+						$('#MOVE_TOP_BTN').fadeIn();
+					} else {
+						$('#MOVE_TOP_BTN').fadeOut();
+					}
+				});
+				
+				$("#MOVE_TOP_BTN").click(function() {
+					$('html, body').animate({
+						scrollTop : 0
+					}, 700);
+					return false;
+				});
+			});
+		</script>
 </body>
 </html>
